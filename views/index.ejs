@@ -1,0 +1,43 @@
+<!-- Aileen -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/head.ejs') %>
+
+</head>
+
+<body>
+  <header>
+    <%- include('partials/header.ejs') %>
+  </header>
+  <main>
+    <div id="roulette"></div>
+
+    <div class="controls">
+      <p>Don't know what to eat? Send burrito-cat your location and budget and let her do the work!</p>
+      <p>Location here:</p>
+      <input type="text" placeholder="set location here" required></input>
+
+      <p>name your price!</p>
+      <form action="/placeSearch" method="post">
+        <input list="budget" name="budget">
+        <datalist id="budget">
+          <option value="$">
+          <option value="$-$$">
+          <option value="$$-$$$">
+          <option value="$$$-$$$$">
+        </datalist>
+        <input type="submit">
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('partials/footer.ejs') %>
+  </footer>
+</body>
+
+</html>
